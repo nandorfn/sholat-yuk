@@ -1,11 +1,12 @@
 import Image from "next/image"
+import CityOption from "./CityOption";
 
-export default function Header({data}) {
+export default function Header({data, schedule}) {
   return (
     <>
-        <div className="relative w-full h-60">
-            <h1 className="absolute z-10 text-white inset-x-2 inset-y-24 text-2xl">{data.lokasi}</h1>
-            <Image className="object-cover" src='/mosque.jpg' alt="Mosque" fill/>
+        <div className="translate-y-24 text-center">
+            <h1 className="normal-case text-white font-bold inset-x-2 inset-y-24 text-2xl">{data.lokasi}</h1>
+            <p className="text-white">{schedule.tanggal}</p>
         </div>
     </>
   )

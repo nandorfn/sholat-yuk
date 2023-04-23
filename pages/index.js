@@ -1,6 +1,7 @@
 import PrayerTimes from "@/components/PrayerTimes";
 import CityOption from "@/components/CityOption";
 import Header from "@/components/Header";
+import Body from "@/components/Body";
 
 export async function getServerSideProps(context) {
   const { city } = context.query;
@@ -13,21 +14,22 @@ export async function getServerSideProps(context) {
 
   const allData = await fetch(`https://api.myquran.com/v1/sholat/jadwal/${city}/${year}/${month}/${day}`)
   const rawData = await allData.json()
-  
+
   return {
     props: {
-      data : rawData.data,
-      schedule : rawData.data.jadwal
+      data: rawData.data,
+      schedule: rawData.data.jadwal
     }
   }
 }
 
-export default function Home( {data,  schedule} ) {
+export default function Home({ data, schedule }) {
   return (
-    <>
-      <CityOption />
-      <Header data={data}/>
-        <PrayerTimes jadwal={schedule}/>
+    <>  
+      <div className="h-80 bg-cover bg-hero">
+        <Header data={data} schedule={schedule} />
+        <Body jadwal={schedule} />
+    </div>
     </>
   )
 }

@@ -10,14 +10,14 @@ export default function CityOption() {
 
     return (
         <>
-            <div className="flex justify-between mx-8">
-                <select className="w-full" onChange={handleChange} value={city}>
+            <div className="shadow-md mb-8 rounded-t-xl pt-4 flex justify-between mx-8">
+                <select className="w-full bg-white mr-4" onChange={handleChange} value={city}>
                     <option value='1107'>Kota Tangerang</option>
                     <option value='1104'>Kab. Tangerang</option>
                     <option value='1108'>Kota Tangerang Selatan</option>
                 </select>
                 <Link href={`/?city=${city}`} passHref>
-                    <button className="p-2 bg-green-300 rounded-r-md" >Search</button>
+                    <button className="p-2 bg-cyan-300 rounded-r-md" >Search</button>
                 </Link>
             </div>
         </>
