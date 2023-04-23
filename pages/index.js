@@ -2,11 +2,11 @@ import PrayerTimes from "@/components/PrayerTimes";
 import CityOption from "@/components/CityOption";
 import Header from "@/components/Header";
 import Body from "@/components/Body";
+import { useState } from "react";
 
 
 export async function getServerSideProps(context) {
-  const { city } = context.query;
-  
+  const { city = '1107' } = context.query;
   const apiKey = process.env.API_URL
   const today = new Date();
   const year = today.getFullYear();

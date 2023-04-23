@@ -2,7 +2,7 @@ import Link from "next/link"
 import { useState } from "react"
 
 export default function CityOption() {
-    const [city, setCity] = useState('')
+    const [city, setCity] = useState('1107')
 
     const handleChange = (event) => {
         setCity(event.target.value)
