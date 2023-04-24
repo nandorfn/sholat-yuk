@@ -20,7 +20,7 @@ export default function Menu({ visible, onClose,jadwal }) {
         <>
             {popUp && (
                 <div className=''>
-                    <div className="bg-white z-10 h-screen w-96 absolute transform translate-x-42 transition-transform duration-700">
+                    <div className="bg-white z-10 h-full w-72 absolute transform translate-x-42 transition-transform duration-700">
                         <div><i onClick={handleClick} className="fa-solid fa-circle-xmark absolute fa-xl right-3 top-6"></i></div>
                         <CustomDate jadwal={jadwal}/>
                     </div>

@@ -10,7 +10,7 @@ export default function PrayerTimes({ jadwal }) {
                 <h1 className="text-center mb-4 text-2xl">Jadwal Shalat Hari Ini</h1>
 
                 {filterSchedule.map(([key, value]) => (
-                    <div key={key} className="grid mb-2 grid-cols-2 text-xl border p-4 shadow-md rounded-lg">
+                    <div key={key} className="prayerList grid mb-2 grid-cols-2 text-xl border p-4 shadow-md rounded-lg">
                         <p>{key.charAt(0).toUpperCase() + key.slice(1)}: </p>
                         <p className="text-end">{value}</p>
                     </div>

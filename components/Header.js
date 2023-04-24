@@ -9,9 +9,10 @@ export default function Header({data, schedule}) {
           <CityOption data={data} jadwal={schedule}/>
         </div>
       
-        <div className="translate-y-24 text-center">
-            <h1 className="normal-case text-white font-bold inset-x-2 inset-y-24 text-2xl">{data.lokasi}</h1>
-            <p className="text-white">{schedule.tanggal}</p>
+        <div className="flex m-auto translate-y-16 flex-col 
+        text-center">
+            <h1 className="normal-case text-white font-bold text-2xl drop-shadow-lg">{data.lokasi}</h1>
+            <p className="text-white drop-shadow-lg">{schedule.tanggal}</p>
         </div>
       </div>
     </>

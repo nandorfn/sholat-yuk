@@ -1,15 +1,17 @@
-import { useState } from "react";
-import CustomDate from "./CustomDate";
+import MonthPrayer from "./MonthPrayer";
 import PrayerTimes from "./PrayerTimes";
 
-export default function Body({ jadwal }) {
+export default function Body({ jadwal , monthSchedule}) {
 
 
     return (
-        <>
-            <div className="mt-60 rounded-t-3xl bg-white">
+        <>  
+        <div className="bg-white rounded-3xl -translate-y-14">
+            <div className="mt-60 pt-4 rounded-t-3xl bg-white">
                 <PrayerTimes jadwal={jadwal} />
+                <MonthPrayer monthSchedule={monthSchedule}/>
             </div>
+        </div>
         </>
     );
 }
