@@ -41,6 +41,7 @@ export default function CityOption({jadwal}) {
                     <option value='1423'>Kab. Semarang</option>
                     <option value='1505'>Kota Yogyakarta</option>
                     <option value='1434'>Kota Surakarta</option>
+                    <option value='1428'>Kota Wonogiri</option>
                     <option value='1638'>Kota Surabaya</option>
                 </select>
                 
