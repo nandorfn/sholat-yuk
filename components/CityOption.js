@@ -46,7 +46,7 @@ export default function CityOption({jadwal}) {
                 </select>
                 
                 <Link href={`/?city=${city}`} passHref>
-                    <button className="py-2 px-4 bg-cyan-300 rounded-r-full" >Cari</button>
+                    <button className="py-2 px-4 bg-sky-300 rounded-r-full" >Cari</button>
                 </Link>
             </div>
         </>

@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Body from "@/components/Body";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 export async function getServerSideProps(context) {
@@ -37,12 +37,16 @@ export async function getMonthSchedule() {
 
 
 export default function Home({ data, schedule }) {
-  let monthSchedule = {};
+  const [monthSchedule, setMonthSchedule] = useState({});
 
-  getMonthSchedule().then((result) => {
-    monthSchedule = result;
-    
-  });
+  useEffect(() => {
+    const fetchMonthSchedule = async () => {
+      const result = await getMonthSchedule();
+      setMonthSchedule(result);
+    };
+
+    fetchMonthSchedule();
+  }, []);
   
 
   return (
