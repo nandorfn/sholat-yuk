@@ -25,16 +25,11 @@ export async function getServerSideProps(context) {
   }
 }
 
-
-
-
-
 export async function getMonthSchedule() {
   const response = await fetch('https://api.myquran.com/v1/sholat/jadwal/1609/2021/04')
   const jsonData = await response.json();
   return jsonData.data;
 }
-
 
 export default function Home({ data, schedule }) {
   const [monthSchedule, setMonthSchedule] = useState({});
