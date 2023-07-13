@@ -4,7 +4,7 @@ import Menu from "./Menu"
 
 
 export default function CityOption({jadwal}) {
-    const [city, setCity] = useState('1107');
+    const [city, setCity] = useState('1301');
     const [popUp, setPopUp] = useState(false);
 
     const handleChange = (event) => {

@@ -16,13 +16,12 @@ export default function CustomDate({jadwal, handleClick}) {
     return (
         <>
             <h1 className="text-center mt-10 text-xl">Atur Tanggal</h1>
-            <div className="text-center bg-sky-300 p-5 rounded-lg mt-2 mx-12 ">
-                <input className="text-center bg-white rounded-md px-2 py-2 text-md" onChange={handleChange} type="date" id="start" name="trip-start"
+            <div className="text-center bg-sky-300 py-3 rounded-md mt-2 mx-10 grid grid-cols-3">
+                <input className="text-center bg-white rounded-md py-1 ml-3 text-md col-span-2" onChange={handleChange} type="date" id="start" name="trip-start"
                     min="2021-01-01" max="2030-12-31" required pattern="\d{4}/\d{2}/\d{2}/" />
                     
                 <Link href={`/?customDate=${customDate}`} passHref>
-                <button onClick={handleClick} className="py-2 ml-4 mt-2 px-2 bg-white rounded-lg" disabled={!customDate}>Search</button>
-
+                    <button onClick={handleClick} className="p-2 bg-white rounded-md" disabled={!customDate}>Cari</button>
                 </Link>
             </div>
             
