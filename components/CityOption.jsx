@@ -23,9 +23,9 @@ export default function CityOption({jadwal}) {
         <>
             <Menu jadwal={jadwal} visible={popUp} onClose={handleMenuClose} />
             
-            <div className="drop-shadow-lg pt-4 flex justify-between mx-8">
+            <div className=" drop-shadow-lg pt-4 flex justify-between mx-8">
                 <div className="py-2 px-4 bg-white rounded-l-full">
-                    <i onClick={handleMenuClick} className="fa-solid fa-bars cursor-pointer"></i>
+                    {/* <i  className="fa-solid fa-bars cursor-pointer"></i> */}
                 </div>
                 <select className="w-full bg-white" onChange={handleChange} value={city}>
                     <option value='1301'>Kota Jakarta</option>

@@ -5,7 +5,7 @@ export default function Header({data, schedule}) {
   return (
     <>  
       <div>
-        <div>
+        <div className="max-w-xl mx-auto">
           <CityOption data={data} jadwal={schedule}/>
         </div>
       

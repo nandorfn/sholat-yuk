@@ -10,9 +10,6 @@ export default function CustomDate({jadwal, handleClick}) {
         const date = format.split('-').join('/');
         setCustomDate(date);
     };
-
-
-
     return (
         <>
             <h1 className="text-center mt-10 text-xl">Atur Tanggal</h1>
